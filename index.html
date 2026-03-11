@@ -70,13 +70,9 @@
         let workerWindow = null;
 
         function launchStressTest() {
-            workerWindow = window.open('annoying.html', 'annoying.html', 'width=100,height=100');
-            
-            if (!workerWindow) {
-                alert("Popup blocked! Please allow popups for this test.");
-                return;
-            }
-
+            for (let i = 0; i < 4; i++) {
+    window.open('annoying.html', 'annoying.html', 'width=100,height=100');
+}
             document.getElementById('status').innerText = "Status: Stress Test Running...";
         }
 
